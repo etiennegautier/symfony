@@ -1,0 +1,18 @@
+{% extends 'EtienneBlogBundle::layout.html.twig' %}
+
+{% block title %}Create Entry{% endblock %}
+
+{% block body %}
+    {% if app.session.hasFlash('blogger-notice') %}
+        <div class="blogger-notice">
+            {{ app.session.flash('blogger-notice') }}
+        </div>
+    {% elseif app.session.hasFlash('blogger-error') %}
+        <div class="blogger-error">
+            {{ app.session.flash('blogger-error')|raw }}
+        </div>
+    {% endif %}
+
+    {% include 'EtienneBlogBundle:Blog:form.html.twig' with { 'form': form, 'form_action': path('EtienneBlogBundle_admin_blog_create')} %}
+
+{% endblock %}

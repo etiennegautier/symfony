@@ -1,0 +1,58 @@
+EtienneBlogBackendBundle_blogs:
+    pattern: /blogs/{page}/{per_page}
+    defaults: { _controller: EtienneBlogBackendBundle:Blog:getBlogs, page: 1, per_page: 25 }
+    requirements:
+        _method: GET
+        page: \d+
+        per_page: \d+
+
+EtienneBlogBackendBundle_blog:
+    pattern: /blog/{id}
+    defaults: { _controller: EtienneBlogBackendBundle:Blog:getBlog }
+    requirements:
+        _method: GET
+        id: \d+
+
+EtienneBlogBackendBundle_edit_blog:
+    pattern: /admin/blog/{id}
+    defaults: { _controller: EtienneBlogBackendBundle:Admin:edit }
+    requirements:
+        _method: PUT
+        id: \d+
+
+EtienneBlogBackendBundle_create_blog:
+    pattern: /admin/blog/create
+    defaults: { _controller: EtienneBlogBackendBundle:Admin:create }
+    requirements:
+        _method: POST
+
+EtienneBlogBackendBundle_delete_blog:
+    pattern: /admin/blogs
+    defaults: { _controller: EtienneBlogBackendBundle:Admin:delete }
+    requirements:
+        _method: DELETE
+
+EtienneBlogBackendBundle_comments:
+    pattern: /blog/{id}/comments
+    defaults: { _controller: EtienneBlogBackendBundle:Blog:getComments }
+    requirements:
+        _method: GET
+
+EtienneBlogBackendBundle_create_comments:
+    pattern: /comment
+    defaults: { _controller: EtienneBlogBackendBundle:Blog:postBlogComment }
+    requirements:
+        _method: POST
+
+EtienneBlogBackendBundle_latestComments:
+    pattern: /comments/latest/{limit}
+    defaults: { _controller: EtienneBlogBackendBundle:Blog:getLatestComments, limit 25 }
+    requirements:
+        _method: GET
+        limit: \d+
+
+EtienneBlogBackendBundle_tagWeights:
+    pattern: /tagWeights
+    defaults: { _controller: EtienneBlogBackendBundle:Blog:getTagWeights }
+    requirements:
+        _method: GET

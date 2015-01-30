@@ -1,0 +1,13 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+    {% stylesheets '@EtienneBlogBundle/Resources/public/css/*' output='css/blogger.css' filter='cssrewrite,?yui_css' %}
+        <link href="{{ asset_url }}" rel="stylesheet" media="screen" />
+    {% endstylesheets %}
+{% endblock %}
+
+{% block sidebar %}
+    {% render 'EtienneBlogBundle:Page:sidebar' %}
+{% endblock %}

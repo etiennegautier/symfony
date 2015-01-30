@@ -1,0 +1,66 @@
+EtienneBlogBundle_homepage:
+    pattern:  /
+    defaults: { _controller: EtienneBlogBundle:Page:index }
+    requirements:
+        _method:  GET
+
+login:
+    pattern: /login
+    defaults: { _controller: EtienneBlogBundle:Security:login }
+
+login_check:
+    pattern: /login_check
+
+logout:
+    pattern: /logout
+
+EtienneBlogBundle_about:
+    pattern: /about
+    defaults: { _controller: EtienneBlogBundle:Page:about }
+    requirements:
+        _method: GET
+
+EtienneBlogBundle_contact:
+    pattern: /contact
+    defaults: { _controller: EtienneBlogBundle:Page:contact }
+    requirements:
+        _method: GET|POST
+
+EtienneBlogBundle_blog_show:
+    pattern: /{id}/{slug}
+    defaults: { _controller: EtienneBlogBundle:Blog:show }
+    requirements:
+        _method: GET
+        id: \d+
+
+EtienneBlogBundle_comment_create:
+    pattern: /comment/{id}
+    defaults: { _controller: EtienneBlogBundle:Comment:create }
+    requirements:
+        _method: POST
+        id: \d+
+
+EtienneBlogBundle_admin:
+    pattern: /admin
+    defaults: { _controller: EtienneBlogBundle:Admin:index }
+    requirements:
+        _method: GET
+
+EtienneBlogBundle_admin_blog_delete:
+    pattern: /admin/delete
+    defaults: { _controller: EtienneBlogBundle:Admin:delete }
+    requirements:
+        _method: POST
+
+EtienneBlogBundle_admin_blog_edit:
+    pattern: /admin/edit/{id}
+    defaults: { _controller: EtienneBlogBundle:Admin:edit }
+    requirements:
+        _method: GET|POST
+        id: \d+
+
+EtienneBlogBundle_admin_blog_create:
+    pattern: /admin/create
+    defaults: { _controller: EtienneBlogBundle:Admin:create }
+    requirements:
+        _method: GET|POST

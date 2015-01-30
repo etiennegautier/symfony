@@ -1,0 +1,14 @@
+parameters:
+    Etienne_blog.emails.contact_email: contact@gmail.com
+    Etienne_blog.comments.latest_comment_limit: 10
+    Etienne_blog.api.admin_username: admin
+    Etienne_blog.api.admin_password: password
+
+services:
+    guzzle_client:
+        class: Etienne\BlogBundle\Services\GuzzleClient
+        arguments: ["%kernel.root_dir%/../src/Etienne/BlogBundle/Resources/config/blog_api.json", "http://localhost:9900/app_dev.php/api"]
+
+    backend_client:
+        class: Etienne\BlogBundle\Services\GuzzleBlogClient
+        arguments: [@guzzle_client]

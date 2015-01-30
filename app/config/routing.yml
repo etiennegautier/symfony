@@ -1,0 +1,7 @@
+EtienneBlogBackendBundle:
+    resource: "@EtienneBlogBackendBundle/Resources/config/routing.yml"
+    prefix:   /api/
+
+EtienneBlogBundle:
+    resource: "@EtienneBlogBundle/Resources/config/routing.yml"
+    prefix:   /

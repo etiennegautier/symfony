@@ -1,0 +1,39 @@
+.blogger-info, .blogger-notice, .blogger-warning, .blogger-error { border: 1px solid; margin: 10px 0px; padding:15px 10px 15px 50px; background-repeat: no-repeat; background-position: 10px center; }             
+.blogger-info { color: #00529b; background-color: #bde5f8; background-image: url('/images/info.png'); }
+.blogger-notice { color: #4f8a10; background-color: #dff2bf; background-image:url('/images/success.png'); }
+.blogger-warning { color: #9f6000; background-color: #feefb3; background-image: url('/web/images/warning.png'); }
+.blogger-error { color: #d8000c; background-color: #ffbaba; background-image: url('/images/error.png'); }
+
+form.blogger { font-size: 16px; }
+form.blogger div { clear: left; margin-bottom: 10px; :}
+form.blogger label { float: left; margin-right: 10px; text-align: right; width: 100px; font-weight: bold; vertical-align: top; padding-top: 10px; }
+form.blogger input[type="text"],
+form.blogger input[type="email"]
+    { width: 500px; line-height: 26px; font-size: 20px; min-height: 26px; }
+form.blogger textarea { width: 500px; height: 150px; line-height: 26px; font-size: 20px; }
+form.blogger input[type="submit"] { margin-left: 110px; width: 508px; line-height: 26px; font-size: 20px; min-height: 26px; }
+form.blogger ul li { color: #ff0000; margin-bottom: 5px; }
+
+.date { margin-bottom: 20px; border-bottom: 1px solid #ccc; font-size: 24px; color: #666; line-height: 30px }
+.blog { margin-bottom: 20px; }
+.blog img { width: 190px; float: left; padding: 5px; border: 1px solid #ccc; margin: 0 10px 10px 0; }
+.blog .meta { clear: left; margin-bottom: 20px; }
+.blog .snippet p.continue { margin-bottom: 0; text-align: right; }
+.blog .meta { font-style: italic; font-size: 12px; color: #666; }
+.blog .meta p { margin-bottom: 5px; line-height: 1.2em; }
+.blog img.large { width: 300px; min-height: 165px; }
+
+.comments { clear: both; }
+.comments .odd { background: #eee; }
+.comments .comment { padding: 20px; }
+.comments .comment p { margin-bottom: 0; }
+.comments h3 { background: #eee; padding: 10px; font-size: 20px; margin-bottom: 20px; clear: both; }
+.comments .previous-comments { margin-bottom: 20px; }
+
+.tagline { font-size: 0.85em; font-style: italic; color: #888; }
+
+input, textarea, button { border: 1px solid #bbb; padding: 5px 3px; }
+
+dt { margin-bottom: 10px; }
+dl + dt { margin-top: 10px; }
+dl input { width: 100%; }

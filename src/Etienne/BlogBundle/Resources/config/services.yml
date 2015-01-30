@@ -1,0 +1,11 @@
+parameters:
+#    Etienne_blog.example.class: Etienne\BlogBundle\Example
+
+services:
+    Etienne_blog.twig.extension:
+        class: Etienne\BlogBundle\Twig\Extensions\EtienneBlogBundleExtension
+        tags:
+            - { name: twig.extension }
+#    Etienne_blog.example:
+#        class: %Etienne_blog.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

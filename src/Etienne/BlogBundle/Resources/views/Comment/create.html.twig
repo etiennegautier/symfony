@@ -1,0 +1,18 @@
+{% extends 'EtienneBlogBundle::layout.html.twig' %}
+
+{% block title %}Add Comment{% endblock%}
+
+{% block body %}
+    {% if app.session.hasFlash('blogger-notice') %}
+        <div class="blogger-notice">
+            {{ app.session.flash('blogger-notice') }}
+        </div>
+    {% elseif app.session.hasFlash('blogger-error') %}
+        <div class="blogger-error">
+            {{ app.session.flash('blogger-error') }}
+        </div>
+    {% endif %}
+
+    <h1>Add comment for blog post "{{ title }}"</h1>
+    {% include 'EtienneBlogBundle:Comment:form.html.twig' with { 'form': form, 'id' : id } %}
+{% endblock %}
